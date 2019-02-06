@@ -2,7 +2,7 @@ body {
     font-family: 'Quicksand', monospace;
 }
 .post-box {
-    height: 175px;
+    min-height: 175px;
     display: flex;
     flex-direction: row;
     margin: 30px;
