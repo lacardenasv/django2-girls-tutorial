@@ -20,7 +20,7 @@ body {
     background-image: url("https://www.pycon.co/static/images/resume_speaker.png");
     background-size: cover;
     background-repeat: no-repeat;
-    color: aliceblue;
+    color: white;
     width: 35%;
 }
 
@@ -67,4 +67,39 @@ body {
     text-align: center;
     margin: 30px 0 50px 0;
     color: #777777;
+}
+
+.header-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 40px;
+}
+
+.new-icon {
+    font-size: 30px;
+    color: white;
+}
+
+.edit-container {
+    display: flex;
+    justify-content: center;
+}
+
+.edit-icon {
+    margin-top: 30px;
+    margin-left: 1rem;
+    font-size: 20px;
+    color: darkblue;
+}
+
+.edit-icon:hover {
+    color: cornflowerblue;
+}
+
+.post-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
 }

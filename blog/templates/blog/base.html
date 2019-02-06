@@ -7,12 +7,18 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat|Quicksand" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
         <div class="header">
             <img src="https://www.pycon.co/static/images/pony-right.svg">
-            <img src="https://www.pycon.co/static/images/DG.svg" width="300">
+            <a href="/">
+                <img src="https://www.pycon.co/static/images/DG.svg" width="300">
+            </a>
+            <div class="header-btn-container">
+                <a href="{% url 'post_new' %}" title="Nuevo Post" class="animated infinite pulse delay-.2s"><span class="glyphicon glyphicon-plus-sign new-icon"></span></a>
+            </div>
         </div>
         <div>
             {% block content %}
