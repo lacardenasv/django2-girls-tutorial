@@ -2,15 +2,17 @@
 {% block content %}
     <p class="main-title">Posts</p>
     {% for post in posts %}
-        <div class="post-box">
-            <div class="post-info">
-                <h2><a class="post-info__title" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-                <p>Autor: {{ post.author.username }}</p>
-                <p>Publicado : {{ post.created_date }}</p>
+        <a style="text-decoration: none;" href="{% url 'post_detail' pk=post.pk %}">
+            <div class="post-box">
+                <div class="post-info">
+                    <h2>{{ post.title }}</h2>
+                    <p>Autor: {{ post.author.username }}</p>
+                    <p>Publicado : {{ post.created_date }}</p>
+                </div>
+                <div class="post-text">
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
             </div>
-            <div class="post-text">
-                <p>{{ post.text|linebreaksbr }}</p>
-            </div>
-        </div>
+        </a>
     {% endfor %}
 {% endblock %}
